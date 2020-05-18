@@ -25,7 +25,7 @@ SECRET_KEY = 'k+8zv3^bjb=*99vobvs8blh5&!=%1f+hp+qk_craozc@yu0ayb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://greenblogapp.herokuapp.com/']
 
 
 # Application definition
