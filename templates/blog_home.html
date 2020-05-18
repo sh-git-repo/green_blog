@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block css %} <link rel="stylesheet" href="{% static 'css/home.css' %}"> {% endblock css%}
+    {% block main %}
+        <section class="blog-main">
+            {% for blog in object_list %}
+                <div class="blog-body">
+                    <section class="blog-title"> <h3> {{ blog.title }} </h3> </section>
+                    <section class="blog-message">
+                        {{ blog.message }}
+                    </section>
+                    <section class="blog-name">
+                        <a href="{% url 'blog-detail' blog.pk %}"> {{ blog.usr }} </a>
+                        <p> {{ blog.blog_date }} </p>
+                    </section>
+                    <br>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock main%}
